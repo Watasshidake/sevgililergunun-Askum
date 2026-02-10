@@ -112,7 +112,6 @@
     const images = [];
     for(let i = 1; i <= 20; i++) { images.push(`resim${i}.jpg`); }
     
-    // YAZILI CEVAPLARI TUTMAK İÇİN YENİ DİZİ
     let userWrittenAnswers = [];
 
     function createPhotoHearts() {
@@ -134,7 +133,7 @@
             setInterval(createPhotoHearts, 900);
             render();
         } else {
-            document.getElementById('pass-error').innerText = "Code incorrect ! Réessaie mon cœur ❤️";
+            document.getElementById('pass-error').innerText = "Code incorrect ! Réessaie mon cœur 💜";
         }
     }
 
@@ -181,7 +180,7 @@
                         current++; firstTry = true; setTimeout(render, 1000);
                     } else {
                         document.getElementById('snd-wrong').play();
-                        document.getElementById('feedback').innerText = "Mauvaise réponse ! Réessaie mon cœur ❤️";
+                        document.getElementById('feedback').innerText = "Mauvaise réponse ! Réessaie mon cœur 💜";
                         firstTry = false;
                     }
                 };
@@ -196,7 +195,6 @@
                 const val = document.getElementById('user-input').value.trim();
                 if(val === "") return;
                 
-                // CEVABI LİSTEYE KAYDET
                 userWrittenAnswers.push(`${questions[current].q}: ${val}`);
                 
                 correctPoints++; 
@@ -214,7 +212,6 @@
         
         const myNumber = "905466775323"; 
 
-        // WHATSAPP İÇİN CEVAPLARI METNE DÖNÜŞTÜR
         let answersText = "\n\n--- Réponses ---";
         userWrittenAnswers.forEach(item => {
             answersText += `\n- ${item}`;
