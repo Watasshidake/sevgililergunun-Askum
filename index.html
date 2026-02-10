@@ -217,8 +217,8 @@
             answersText += `\n- ${item}`;
         });
 
-        const fullMessage = `Askuuum, testi %${score} puanla bitirdim! ❤️${answersText}`;
-        const whatsappURL = `https://wa.me/${myNumber}?text=${encodeURIComponent(fullMessage)}`;
+        const fullMessage = `Askuuum, testi %${score} puanla bitirdim! 💜${answersText}`;
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${myNumber}&text=${encodeURIComponent(fullMessage)}`;
 
         document.getElementById('quiz-content').innerHTML = `
             <h2>Quiz Terminé 💜</h2>
@@ -226,9 +226,11 @@
             <p style="color:#87ceeb; font-weight:bold; font-size: 1.1rem;">Je t'aime plus que tout au monde !</p>
             <div class="roblox-message">Regardez nos avatars sur Roblox, ils sont trop mignons !</div>
             <br>
-            <button onclick="window.location.href='${whatsappURL}'" class="option-btn" style="background:#25D366; color:white; border:none; box-shadow: 0 4px 15px rgba(37,211,102,0.4);">
-                Envoie-moi tes réponses 📱
-            </button>
+            <a href="${whatsappURL}" style="text-decoration: none;">
+                <button class="option-btn" style="background:#25D366; color:white; border:none; box-shadow: 0 4px 15px rgba(37,211,102,0.4);">
+                    Envoie-moi tes réponses 📱
+                </button>
+            </a>
         `;
     }
 </script>
